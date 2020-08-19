@@ -7,4 +7,3 @@ Deep Energy Manager (DEM) is a model-free reinforcement learning (RL) agent for 
 2. `Text classification /`: Text classification using pre-trained BERT model on a highly imbalanced data
 3. `Recommender system /`: Recommender system for an online game EVE Online
 4. `Topic annotator /`: Manual tagger webapp, part of the topic annotator built by a 7-person team.
-5. `data /`: Data used in the projects
