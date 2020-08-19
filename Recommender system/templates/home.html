@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Home</title>
+        <!--<link rel="stylesheet" type="text/css" href="../static/styles.css"> -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+    <style>
+        body {
+            background-image: url("https://d1lss44hh2trtw.cloudfront.net/assets/article/2020/07/13/eve-online_feature.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+    <body>
+        <header>
+            <div class="container">
+                <div id="brandname">
+                    <p style="color: white";>FIND YOUR BEST DEALS!</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="ml-container">
+            <form action="{{ url_for('recommend')}}" method="POST">
+                <p style="color: white";>Enter item you are looking for</p>
+                <!-- <input type="text" name="comment"/> -->
+                <textarea name="message" rows="4" cols="50"></textarea>
+                <br/>
+
+                <input type="submit" class="btn-info" value="recommend">
+            </form>
+        </div>
+    </body>
+    <table>
+        <tr>
+            {% for col in column_names %}
+            <th>{{col}}</th>
+            {% endfor %}
+        </tr>
+        {% for row in row_data %}
+        <tr>
+            {% for col, row_ in zip(column_names, row) %}
+            {% if col == link_column %}
+            <td style="color: white">
+                <button type="submit" value={{ row_ }} name="person_id" form="patient_form" class="patient_button">
+                    {{ row_ }}
+                </button>
+            </td>
+            {% else %}
+            <td>{{row_}}</td>
+            {% endif %}
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    
+    </table>
+</html>
