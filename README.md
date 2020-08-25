@@ -37,3 +37,5 @@ Webapp demonstration
 
 ### Topic annotator
 
+## Acknowledgement
+BERT text classifier is based on the tutorial by Chris McCormick and Nick Ryan available at https://colab.research.google.com/drive/1Y4o3jh3ZH70tl6mCd76vz_IxX23biCPP
